@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barlinale</title>
+     
+    <style>
+        body {
+            font-family: "ariel", sans-serif;
+            margin: 0;
+            padding: 5% 10%;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f9f9f9;
+            cursor: url("images/barlinale-logo.png"), default
+
+        }
+
+        p{
+            text-align: justify;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+       a {
+        color: #333;
+        text-decoration: none;
+ 
+       
+        }
+        a:hover {
+  color: #d00000;;
+}
+        .logo img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+    
+        .event-date {
+            color: #d00000;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 0%; /* Align with films */
+        
+        }
+
+        .program {
+            margin: 30px 0;
+            padding-left: 0%; /* Align with films */
+        }
+        
+u {text-decoration: underline;
+text-decoration-thickness: 3px;
+  -webkit-text-decoration-color:color: #d00000;; /* safari still uses vendor prefix */
+  text-decoration-color: #d00000;}
+
+        .program h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+            text-align: left;
+        }
+
+        .films-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: flex-start; /* Align to left */
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        
+        .film {
+            flex: 0 0 calc(48% - 20px);
+            box-sizing: border-box;
+            text-align: left;
+            max-width: 550px;
+        }
+        
+        .film img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .film .film-title {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #d00000;
+            text-align: left;
+        }
+        
+        .film .filmmaker {
+            color: #333;
+            margin: 5px 0;
+            font-style: normal;
+            text-align: left;
+        }
+        
+        .film p {
+            color: #000000;
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        .film .film-info {
+            text-align: justify;
+        }
+        
+        .film .tech-info {
+            font-style: italic;
+            color: #333;
+            font-size: 0.75em;
+            font-weight: lighter;
+            text-align: left;
+        }
+
+        h2 {
+            text-align: justify;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 5% 5%;
+            }
+
+            .films-container {
+                flex-direction: column;
+                gap: 20px;
+                align-items: left;
+            }
+
+            .film {
+                flex: 0 0 90%;
+            }
+
+            .event-date {
+                text-align: center;
+            }
+
+            .program h3 {
+                text-align: center;
+            }
+
+            .logo {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+<div class="logo">
+    <a href="index.html"><img src="images/barlinale-logo.png" alt="Barlinale"></a><br>
+</div>
+
+<div class="content">
+  
+   
+   <h2>Barlinale is an independent counter film festival taking place February 18–20 at Tennis Bar in Berlin, Germany. With a focus on non-conventional and non-fiction cinema, the three-day event seeks to foster cine-scenes in championing <u>screening as practice</u>, wherein participating filmmakers to extend the invitation in selecting a pairing film.
+    <br><br>We believe that politics are to be practised, not simply programmed, and seek to promote <u>financial equity and transparency</u>  between cultural workers and filmmakers alike. Revenue is split 50/50 between the participants and the festival until its minimal operating budget (€200) is recuperated, whereupon all additional proceeds are given to the filmmakers. However modest a screening fee, it's more than our leading competitors.
+    
+    <br> <br>The hope is to develop a format that can be replicated to nurture a truly independent cinema, asking: <i>What if the money we spent on submission fees went into screening our work instead?</i>
+
+   </h2> 
+
+<div class="films-container">
+
+    <div class="films-container">
+        <div class="film">
+         <p class="film-title">TICKETS</p>
+         <p class="film-info"> 10-20€ sliding scale festival pass at the door, granting access to all events.</p>
+        </div>
+    <div class="film">
+        <p class="film-title">LOCATION</p>
+        <p class="film-info">Tennis Bar is located at Reuterstr 95, Neukölln, Germany. The screening room is located in the basement, which is sadly not wheelchair accessible.</p>
+    </div>
+
+    <div class="film">
+        <p class="film-title">CONTACT</p>
+        <p class="film-info"> <a href="https://www.instagram.com/barlinaleforum/">@barlinaleforum</a> <br>barlinale(at)gmail.com</p>
+    </div>
+
+    
+</div>
+</div>
+</div>
+
+
+   
+</body>
+</html>
