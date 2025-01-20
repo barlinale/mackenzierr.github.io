@@ -7,7 +7,7 @@
     <link rel="icon" href="images/barlinale-logo.png">
      
     <style>
-        body {
+       body {
             font-family: "ariel", sans-serif;
             margin: 0;
             padding: 5% 10%;
@@ -18,9 +18,7 @@
 
         }
 
-        p{
-            text-align: justify;
-        }
+
         .logo {
             display: flex;
             justify-content: center;
@@ -28,16 +26,24 @@
             margin: 20px 0;
         }
 
+        .nav h2 {
+            text-align: center;
+        }
+
+        .nav {
+            border: 5px dashed #000000;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+
+}
+
+        
        a {
         color: #333;
         text-decoration: none;
-        }
-
-        mark {
-            background-color: #d00000;
-            
-            color: white;
-            padding: 2px;
+ 
+       
         }
         a:hover {
   color: #d00000;;
@@ -48,7 +54,6 @@
             height: auto;
         }
 
-    
         .event-date {
             color: #d00000;
             font-weight: bold;
@@ -64,11 +69,6 @@
             padding-left: 0%; /* Align with films */
         }
         
-u {text-decoration: underline;
-text-decoration-thickness: 3px;
-  -webkit-text-decoration-color:color: #d00000;; /* safari still uses vendor prefix */
-  text-decoration-color: #d00000;}
-
         .program h3 {
             margin: 0;
             font-size: 1.5em;
@@ -84,24 +84,7 @@ text-decoration-thickness: 3px;
             align-items: flex-start;
             margin-top: 20px;
         }
-        .nav h2 {
-            text-align: center;
-            color: #d00000;
-        }
-
-        .nav {
-            margin-top: 60px;
-            margin-bottom: 60px;
-            border: 5px dashed #000000;
-            text-align: center;
-            animation: blinker 0s linear infinite ;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
+        
         .film {
             flex: 0 0 calc(48% - 20px);
             box-sizing: border-box;
@@ -114,11 +97,11 @@ text-decoration-thickness: 3px;
             height: auto;
         }
         
-        .film .film-title {
+        .film-title {
             margin-top: 10px;
             margin-bottom: 5px;
             font-weight: bold;
-            font-size: 1.5em;
+            font-size: 1em;
             color: #d00000;
             text-align: left;
         }
@@ -131,7 +114,7 @@ text-decoration-thickness: 3px;
         }
         
         .film p {
-            color: #000000;
+            color: #d00000;
             margin: 10px 0;
             text-align: left;
         }
@@ -148,9 +131,6 @@ text-decoration-thickness: 3px;
             text-align: left;
         }
 
-        h2 {
-            text-align: justify;
-        }
         footer {
             margin-top: 20px;
             padding: 10px;
@@ -160,13 +140,13 @@ text-decoration-thickness: 3px;
 
         @media screen and (max-width: 768px) {
             body {
-                padding: 5% 5%;
+                padding: 0 5%;
             }
 
             .films-container {
                 flex-direction: column;
                 gap: 20px;
-                align-items: left;
+                align-items: center;
             }
 
             .film {
@@ -182,7 +162,7 @@ text-decoration-thickness: 3px;
             }
 
             .logo {
-                margin-top: 10px;
+                margin-top: 20px;
             }
         }
     </style>
@@ -193,48 +173,53 @@ text-decoration-thickness: 3px;
     <a href="index.html"><img src="images/barlinale-logo.png" alt="Barlinale"></a><br>
 </div>
 
-
 <div class="content">
-  
-   
-   <h2>Barlinale is an independent counter film festival with a focus on non-conventional and non-fiction cinema taking place <mark>February 18–20 at Tennis Bar</mark> in Berlin, Germany. By inviting participating filmmakers to select  a pairing film, the three-day event seeks to <mark>foster cine-scenes</mark> and champion screening as practice.
-    <br><br>Barlinale believes that politics are to be practised, not simply programmed. We seek to promote financial <mark>equity, transparency, and solidarity</mark> between cultural workers and filmmakers alike. As a show of the value we place on the works and labour they represent, all proceeds beyond the basic costs of the festival go to the participating artists. However modest a screening fee, it's more than our leading competitors.
 
-    
-    
-</h2>
-<div class="nav" > <h2><a href=programme2025.html>PROGRAMME</a></h2></div>
+    <div class="event-date">FEBRUARY 18-19</div>
+
+    <div class="program">
+        <h3>to be announced...</h3>
+    </div>
 
 
-<div class="films-container">
+    <div class="event-date">FEBRUARY 20</div>
 
-    <div class="films-container">
-        <div class="film">
-         <p class="film-title">TICKETS</p>
-         <p class="film-info"> 10-20€ sliding scale festival pass at the door, granting access to all events.</p>
+    <div class="program">
+        <h3>20h00 - PROGRAMME 4</h3>
+        <div class="films-container">
+            <div class="film">
+                <img src="images/KCSPDS_Still_01.png" alt="Kingdom, Clouds, Sirens, Pirates, and Dream Sheets">
+                <p class="film-title">Kingdom, Clouds, Sirens, Pirates, and Dream Sheets</p>
+                <p class="filmmaker">by Mackenzie Reid Rostad</p>
+                <p class="film-info">An extended correspondence film dedicated to the residents of Liebig 34, an anarcho-feminist housing cooperative and squat in Berlin that was evicted shortly after the filmmaker's attempted move to the city. Comprising both found and filmed images, the film explores concepts of rent, refuge, and resistance in Berlin and beyond.</p>
+                <p class="tech-info">65min., 2021, 2K/24p, Color, HD/Foundfootage, Germany (EN)</p>
+            </div>
+            <div class="film">
+                <img src="images/cloudegate.jpg" alt="Cloud Gate 2">
+                <p class="film-title">Cloud Gate 2</p>
+                <p class="filmmaker">by Kristina Pedersen</p>
+                <p class="film-info">Through a mercurial collage of found footage, desktop screen capture, and images captured by the filmmaker on her pilgrimage to the Cloud Gate (aka "The Bean", Chicago's only must-see monument) one year after her grandmother's passing, Cloud Gate 2 is a meditation on the architecture and technology of memory.</p>
+                <p class="tech-info">43min., 2022, 2K/24p, Color</p>
+            </div>
         </div>
-    <div class="film">
-        <p class="film-title">LOCATION</p>
-        <p class="film-info">Tennis Bar is located at Reuterstr 95, Neukölln, Germany. The screening room is in the basement, which is sadly not wheelchair accessible.</p>
     </div>
 
-    <div class="film">
-        <p class="film-title">CONTACT</p>
-        <p class="film-info"> <a href="https://www.instagram.com/barlinaleforum/">@barlinaleforum</a> <br>barlinale(at)proton.me</p>
+    <div class="program">
+        <h3>22h00 - CLOSING PARTY</h3>
+        <div class="films-container">
+            <div class="film">
+                <img src="images/leonie.jpg" alt="Leonie">
+                <p>Awarding of the Golden and Silver Beers and closing party featuring DJ Leonie</p>
+            </div>
+        </div>
     </div>
-  
+</div>
+
+<div class="nav" > <h2><a href=index.html>ABOUT</a></h2></div>
+
+<div class="logo">
+
    
-</div>
-</div>
-
-
-
-
-
-    
-</div>
-
-
    
 </body>
 </html>
