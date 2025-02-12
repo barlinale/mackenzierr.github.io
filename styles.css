@@ -1,0 +1,205 @@
+body {
+  font-family: "ariel", sans-serif;
+  margin: 0px;
+  padding: 0% 10%;
+  box-sizing: border-box;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+p{
+  text-align: left;
+}
+
+h2 {
+  text-align: justify;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.artist {
+  font-size: 20px;
+  color: #333;
+  background: none;
+  margin: 0px;
+  padding: 0;
+  animation: blinker 2.5s linear infinite ;
+}
+
+mark {
+  background-color: #d00000;
+  color: white;
+  padding: 2px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+ height: 300;
+}
+
+.nav h2 {
+  text-align: center;
+}
+
+.nav {
+  border: 5px dashed #000000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+
+a {
+color: #333;
+text-decoration-color: black;
+}
+a:hover {
+color: #d00000;;
+}
+.logo img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+.event-date {
+  color: #d00000;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
+  margin: 20px 0;
+  padding-left: 0%; /* Align with films */
+
+}
+
+.legend {
+  margin: 30px 0;
+  padding-left: 0%; /* Align with films */
+  padding: 0vw;
+ 
+  float: center;
+}
+
+.program {
+  margin: 30px 0;
+  padding-left: 0%; /* Align with films */
+  padding: 0vw;
+  border: 2.5px dotted #d00000;
+}
+
+h3 {
+  margin: 0px;
+  font-size: 1.5em;
+  color: #333;
+  text-align: left;
+}
+
+h4{
+  margin: 0px;
+  font-size: 1.1em;
+  color: #333;
+  text-align: left;
+  font-weight: lighter;
+}
+
+.films-container {
+padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: flex-start; /* Align to left */
+  align-items: flex-start;
+  
+  
+}
+
+.film {
+  flex: 0 0 calc(50% - 20px); /* Adjust width for better alignment */
+
+}
+
+.film img {
+  width: 100%;
+  height: auto;
+}
+
+.film-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #d00000;
+  text-align: left;
+}
+
+.film .filmmaker {
+  color: #333;
+  margin: 5px 0;
+  font-style: normal;
+  text-align: left;
+}
+
+.film p {
+  color: #d00000;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.film .film-info {
+  color: #333;
+  text-align: justify;
+}
+
+.film .tech-info {
+  font-style: italic;
+  color: #333;
+  font-size: 0.75em;
+  font-weight: lighter;
+  text-align: left;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+      padding: 5% 5%;
+  }
+
+  .films-container {
+      flex-direction: column;
+      gap: 20px;
+      align-items: left;
+  }
+
+  .film {
+      flex: 0 0 90%;
+  }
+
+  .event-date {
+      text-align: center;
+  }
+
+  h3 {
+      text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+}
+
+  .logo {
+      margin-top: 10px;
+  }
+}
