@@ -5,14 +5,13 @@ body {
   box-sizing: border-box;
   color: #333;
   background-color: #f9f9f9;
+  padding-bottom: 5%;
 }
 
 video {
   width: 100%;
   height: auto;
 }
-
-
 
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -36,9 +35,7 @@ video {
   gap: 40px;
 }
 
-
 table {
- 
   background-size: 100vw;
   color: #d00000;
   width: 100%;
@@ -291,6 +288,8 @@ footer {
   background: #f4f4f4;
   text-align: center;
 }
+
+
 
 @media screen and (max-width: 768px) {
   body {
