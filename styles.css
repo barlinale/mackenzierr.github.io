@@ -342,7 +342,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   body {
-      padding: 5% 2.5%;
+      padding: 5% 0%;
   }
 
   .photos {
@@ -402,7 +402,7 @@ footer {
 .emblem {
   height: 300;
   border: 0px dotted #d00000;
-  width:65vw;
+  width:90vw;
   margin:0 auto;
   }
 
