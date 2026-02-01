@@ -289,11 +289,13 @@ padding: 20px;
 .film img {
   width: 100%;
   height: auto;
+  
 }
 
 img {
-  width: 100%;
   height: auto;
+   max-width: 100%;
+  display: block;
 }
 
 .film-title {
@@ -342,7 +344,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   body {
-      padding: 5% 0%;
+      padding: 5% 5%;
   }
 
   .photos {
@@ -355,7 +357,7 @@ footer {
       flex-direction: column;
       gap: 20px;
       align-items: left;
-      
+      width: 100vw;
   }
 
   .film {
@@ -370,7 +372,6 @@ footer {
       flex-direction: column;
       gap: 20px;
       align-items: left;
-
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
