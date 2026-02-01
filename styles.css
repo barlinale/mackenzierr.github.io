@@ -109,6 +109,12 @@ mark {
   padding: 2px;
 }
 
+ .year{
+  background-color: #000000;
+  color: white;
+  padding: 2px;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -159,11 +165,11 @@ color: #d00000;;
   border: 0px dotted #d00000;
   width:55vw;
   margin:0 auto;
+  padding-bottom: 1rem;
   }
 
 .emblem {
   height: 300;
-  border: 0px dotted #d00000;
   width:35vw;
   margin:0 auto;
   }
@@ -172,16 +178,41 @@ color: #d00000;;
   color: #d00000;
   font-weight: bold;
   font-size: 2em;
-  text-align: left;
-  margin: 20px 0;
+  text-align: center;
+  margin: 0px;
+  padding-left: 0%; /* Align with films */
+
+  top: 0;
+  position: sticky;
+  z-index: 20;
+  padding: 1rem 2rem;
+  padding-bottom: 0vh;
+border: 0px dotted #d00000;
+}
+
+
+
+  .hour {
+  position: relative;
+}
+
+.event-title {
+  color: #d00000;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0px 0;
   padding-left: 0%; /* Align with films */
 
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 1.5rem 1rem;
+  padding: 3.5rem 2rem;
   padding-bottom: 0vh;
+
+  border: 0px dotted #d00000;
 }
+
 
 .event-year {
   color: #d00000;
@@ -384,6 +415,10 @@ footer {
       text-align: center;
   }
 
+  .event-title 
+  {
+text-align: center;
+}
   h3 {
       text-align: center;
   }
