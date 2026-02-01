@@ -47,7 +47,7 @@ video {
 }
 
 table {
-  background-size: 100vw;
+  background-size: 100%;
   color: #d00000;
   width: 100%;
   height: 56vh;
@@ -344,7 +344,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   body {
-      padding: 5% 5%;
+       padding: 1rem;
   }
 
   .photos {
@@ -357,7 +357,7 @@ footer {
       flex-direction: column;
       gap: 20px;
       align-items: left;
-      width: 100vw;
+      
   }
 
   .film {
