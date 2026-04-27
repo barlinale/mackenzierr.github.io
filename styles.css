@@ -1,16 +1,220 @@
+:root {
+  --background: #f9f9f9;
+  --link: #D10026;
+  --highlight: #D10026;
+  --border: #D10026;
+  --colour2: #D10026;
+}
+
 body {
   font-family: "ariel", sans-serif;
   margin: 0px;
   padding: 0% 10%;
   box-sizing: border-box;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: var(--background);
   padding-bottom: 5%;
+}
+
+.award {
+  background-color: var(--border);
 }
 
 .title{
   font-size: 200vw;
 }
+
+.bottle-div {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+}
+
+.bottle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: center;
+  
+  /* Stage 1: Laying flat (Default) */
+  transform: rotate(0deg); 
+}
+
+/* Stage 2: Pointing down (Active) */
+.bottle.open {
+  transform: rotate(10deg);
+}
+
+/* Optional: Subtle wiggle/scale on hover in either state */
+.bottle:hover {
+  transition: transform 0.5s ease-in-out;
+   transform: rotate(10deg);
+}
+
+.bottle svg {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.bottle-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 1em;
+}
+
+.box {
+    border: 2.5px dotted var(--border);
+    padding: 1em;
+}
+.box form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  max-width: 100%; /* Wider to accommodate 3 fields in a row */
+  margin: 0 auto;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Makes all three fields equal width */
+  text-align: left;
+}
+
+.field label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: larger;
+  background-color: var(--colour2); 
+  color: var(--background); 
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-style: italic;
+  text-transform:uppercase;
+}
+
+.submit-btn:not(:disabled):hover {
+  background-color: var(--background); /* Changes color on hover */
+  color: var(--border);
+    cursor: pointer;
+}
+
+
+/* Specific style for when it is disabled (Cheers state) */
+.submit-btn:disabled {
+  background-color: var(--highlight); /* Keep it aqua once finished */
+  color: var(--background);
+  cursor: default;        /* Stop the "hand" pointer */
+  opacity: 1;             /* Prevents browser from making it look "greyed out" */
+}
+
+
+a {
+  text-decoration: none;
+}
+
+span {
+    color: #d00000;
+}
+.extern {
+  text-decoration-line: underline;
+}
+
+
+
+nav {
+  width: 100%;
+  background-color: var(--background);
+  
+  /* Start hidden and "collapsed" */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+nav.active {
+  opacity: 1;
+  max-height: 500px; /* Set this higher than your actual menu height */
+  padding-bottom: 20px; /* Optional: space at the very bottom of the page */
+}
+
+.nav-footer ul {
+  display: flex;
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  /* ADD THESE TWO LINES */
+  padding: 0; 
+  margin: 0;
+}
+
+nav li {
+  height: 60px;  
+  width: 100%;
+  font-size: 25px;
+  font-weight: bolder;
+  /* Optional: adds a border so you can see the box boundaries */
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+nav a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;     /* Vertically centers text */
+  justify-content: center; /* Horizontally centers text */
+  text-decoration: none;
+  color: black;
+}
+
+ .image-gallery > div {
+  columns: 3;
+  gap: 1em;
+  padding-top: 1em;
+ }
+
+ .image-gallery img {
+  display: block;
+  width: 100%;
+  border: 1.25em;
+  margin-bottom: 1em;
+ }
 
 video {
   width: 100%;
@@ -59,21 +263,20 @@ h1 {
 }
 
 th {
- border-color: #f00000;
+ border-color: var(--border);
 color: #d00000;
  border: 1px solid;
 }
 
 td {
   width: 50%;
-padding-left: 2.5px;
-padding-right: 2.5px;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
   text-align: left; 
   vertical-align: middle;
   margin-left: auto; 
   margin-right: auto;
   color: #000000;
- 
  }
 
  .ex {
@@ -86,6 +289,14 @@ p{
 
 .about {
   text-align: justify;
+}
+
+.aboutt {
+  text-align: justify;
+}
+
+.note {
+  text-align: center;
 }
 
 @keyframes blinker {
@@ -104,14 +315,14 @@ p{
 }
 
 mark {
-  background-color: #d00000;
-  color: white;
+  background-color: var(--highlight);
+  color: var(--background);
   padding: 2px;
 }
 
  .year{
   background-color: #000000;
-  color: white;
+  color: var(--background);
   padding: 2px;
 }
 
@@ -120,26 +331,41 @@ mark {
   justify-content: center;
   align-items: center;
   margin: 10px 0;
- height: 300;
+  /* Remove width/height from here if you want the container to fit the logo */
+}
+
+.logo svg {
+  width: 320px;  /* Set your desired width here */
+  padding-top: 1em;
+  height: auto; /* Maintains the original aspect ratio */
+  color: var(--brand-color); 
 }
 
 .nav-main h2 {
   text-align: center;
 }
 
-h2 {
+.poster {
+  width: 40vw;
+  align-items: center;
+  margin: auto;
+}
+.nav {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.nav {
-  border: 5px dashed #000000;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 50px;
+.nav-footer {
+    border: 2.5px dotted var(--border);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.nav-footer h3 {
+    padding-bottom: 15px;
 }
 
 .nav-main {
-  border: 5px dashed #000000;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 50px;
@@ -151,7 +377,7 @@ text-decoration-color: black;
 }
 
 a:hover {
-color: #d00000;;
+color: var(--link);
 }
 
 .logo img {
@@ -174,8 +400,8 @@ color: #d00000;;
   margin:0 auto;
   }
 
-.event-date {
-  color: #d00000;
+.sticky-title {
+  color: var(--highlight);
   font-weight: bold;
   font-size: 2em;
   text-align: center;
@@ -189,13 +415,11 @@ color: #d00000;;
   border: 0px dotted #d00000;
 }
 
-
-
-  .hour {
+  .sticky-section {
   position: relative;
 }
 
-.event-title {
+.sticky-subtitle {
   color: #d00000;
   font-weight: bold;
   font-size: 1.5em;
@@ -231,12 +455,20 @@ color: #d00000;;
 }
 
 .program {
-  margin: 30px 0;
+  margin: 15px 0;
+
+  margin-bottom: 0px;
   padding-left: 0%; /* Align with films */
   padding: 0vw;
-  border: 2.5px dotted #d00000;
+  border: 2.5px dotted #d00026;
+}
 
-  
+.goes {
+  margin: 15px 0;
+  margin-bottom: 0px;
+  padding-left: 0%; /* Align with films */
+  padding: 1em;
+  border: 2.5px dotted #d00026;
 }
 
 .programmenotes {
@@ -249,8 +481,7 @@ color: #d00000;;
 }
 
 h3 {
-  margin: 0px;
-  padding-top: 15px;
+  margin-top: 1em;
   font-size: 1.5em;
   color: #333;
   text-align: center;
@@ -258,7 +489,7 @@ h3 {
 
 h4{
   margin: 0px;
-  padding-top: 0px;
+  padding-top: 1em;
   font-size: 1.1em;
   color: #333;
   text-align: center;
@@ -383,6 +614,9 @@ footer {
     max-width: 100%;
   }
 
+.image-gallery > div {
+  columns: 1;
+}
   .films-container {
       flex-direction: column;
       gap: 20px;
@@ -410,11 +644,11 @@ footer {
   align-items: flex-start;
   }
 
-  .event-date {
+  .sticky-title {
       text-align: center;
   }
 
-  .event-title 
+  .sticky-subtitle
   {
 text-align: center;
 }
@@ -446,6 +680,38 @@ text-align: center;
   border: 0px dotted #d00000;
   width:100%;
   margin:0 auto;
+  }
+
+  .nav-main a {
+    display: block;
+    margin: 5px 0;
+  }
+ 
+  .nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+   .nav-footer a {
+    display: block;
+    margin: 5px 0;
+  }
+
+   .sep {
+    display: none;
+  }
+
+.input-row {
+    flex-direction: column; /* Stacks the Name, Email, and Subject vertically */
+    gap: 15px;              /* Adds vertical space between the stacked fields */
+  }
+
+  .box form {
+    max-width: 100%;         /* Ensures the form doesn't hug the very edge of the phone */
+  }
+
+  .field {
+    width: 100%;            /* Forces each field to take up full width on mobile */
   }
 
 }
