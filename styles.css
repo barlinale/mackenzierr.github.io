@@ -78,7 +78,7 @@ body {
 }
 
 .box {
-    border: 2.5px dotted var(--border);
+    border: 3px dotted var(--border);
     padding: 1em;
     width: 100%;
 }
