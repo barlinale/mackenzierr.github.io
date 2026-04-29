@@ -78,7 +78,7 @@ body {
 }
 
 .box {
-    border: 3px dotted var(--border);
+    border: 2px dotted var(--border);
     padding: 1em;
     width: 100%;
 }
@@ -121,7 +121,6 @@ body {
   cursor: pointer;
   font-weight: normal;
   font-style: italic;
-  text-transform:uppercase;
 }
 
 .submit-btn:not(:disabled):hover {
@@ -366,7 +365,7 @@ mark {
 }
 
 .nav-footer {
-    border: 2.5px dotted var(--border);
+    border: 2px dotted var(--border);
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -470,7 +469,7 @@ color: var(--link);
   margin-bottom: 0px;
   padding-left: 0%; /* Align with films */
   padding: 0vw;
-  border: 2.5px dotted #d00026;
+  border: 2px dotted #d00026;
 }
 
 .goes {
@@ -478,7 +477,7 @@ color: var(--link);
   margin-bottom: 0px;
   padding-left: 0%; /* Align with films */
   padding: 1em;
-  border: 2.5px dotted #d00026;
+  border: 2px dotted #d00026;
 }
 
 .programmenotes {
