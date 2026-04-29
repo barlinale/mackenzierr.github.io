@@ -70,10 +70,19 @@ body {
   padding-top: 1em;
 }
 
+
+
+
+* {
+  box-sizing: border-box;
+}
+
 .box {
     border: 2.5px dotted var(--border);
     padding: 1em;
+    width: 100%;
 }
+
 .box form {
   display: flex;
   flex-direction: column;
@@ -98,6 +107,7 @@ body {
 .field label {
   font-size: 12px;
   margin-bottom: 5px;
+  font-size: large;
 }
 
 .submit-btn {
@@ -109,7 +119,7 @@ body {
   color: var(--background); 
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
   font-style: italic;
   text-transform:uppercase;
 }
@@ -714,6 +724,10 @@ text-align: center;
 
   .field {
     width: 100%;            /* Forces each field to take up full width on mobile */
+  }
+
+  .box {
+    margin: 0 auto;
   }
 
 }
