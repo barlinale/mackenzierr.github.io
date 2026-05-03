@@ -9,6 +9,7 @@
 }
 
 
+
 .img-wrapper {
     position: relative; /* Anchor for the overlay */
     display: inline-block;
@@ -51,7 +52,7 @@
   top: 8px;
  
   margin-left: 20px;
-  color: var(--background);
+  color: #f9f9f9;
 }
 
 .img-wrapper h4 {
@@ -60,7 +61,7 @@
   top: 40px;
 
   margin-left: 20px;
-  color: var(--background);
+  color: #f9f9f9;
 }
 
 body {
@@ -73,17 +74,8 @@ body {
   padding-bottom: 5%;
 }
 
-.award {
-  background-color: var(--highlight);
-}
-
 .title{
   font-size: 200vw;
-}
-
-.overlay {
-  background-color: purple;
-  background-blend-mode: screen;
 }
 
 
@@ -132,9 +124,6 @@ body {
   width: 100%;
   padding-top: 1em;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -212,34 +201,29 @@ input {
   border: none;
   cursor: pointer;
   font-weight: bolder;
- text-align: center;
-
- 
-    border-radius: 3px;
+  text-align: center;
+  border-radius: 3px;
 }
 
 .submit-btn:not(:disabled):hover {
-  background-color: var(--background); /* Changes color on hover */
+  background-color: var(--background);
   color: var(--colour2);
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
-/* Specific style for when it is disabled (Cheers state) */
 .submit-btn:disabled {
-  background-color: var(--highlight); /* Keep it aqua once finished */
+  background-color: var(--colour2);
   color: var(--background);
-  cursor: default;        /* Stop the "hand" pointer */
-  opacity: 1;             /* Prevents browser from making it look "greyed out" */
+  cursor: default;
+  opacity: 1;
 }
-
 
 a {
   text-decoration: none;
 }
 
 span {
-    color: #d00000;
+    color: var(--highlight);
 }
 .extern {
   text-decoration-line: underline;
@@ -304,7 +288,7 @@ nav a {
   align-items: center;     /* Vertically centers text */
   justify-content: center; /* Horizontally centers text */
   text-decoration: none;
-  color: black;
+  color: var(--font);
 }
 
  .image-gallery > div {
@@ -356,7 +340,7 @@ video {
 
 table {
   background-size: 100%;
-  color: #d00000;
+  color: var(--highlight);
   width: 100%;
   height: 56vh;
   border: 0px dashed;
@@ -368,7 +352,7 @@ h1 {
 
 th {
  border-color: var(--border);
-color: #d00000;
+color: var(--highlight);
  border: 1px solid;
 }
 
@@ -380,7 +364,7 @@ td {
   vertical-align: middle;
   margin-left: auto; 
   margin-right: auto;
-  color: #000000;
+  color: var(--font);
  }
 
  .ex {
@@ -407,7 +391,7 @@ p{
 
 .artist {
   font-size: 20px;
-  color: #333;
+  color: var(--font);
   background: none;
   margin: 0px;
   padding: 0;
@@ -472,7 +456,7 @@ mark {
 }
 
 a {
-color: #333;
+color: var(--font);
 text-decoration-color: black;
 }
 
@@ -488,7 +472,7 @@ color: var(--link);
 
 .info {
   height: 300;
-  border: 0px dotted #d00000;
+  border: 0px dotted var(--border);
   width:55vw;
   margin:0 auto;
   padding-bottom: 1rem;
@@ -512,7 +496,7 @@ color: var(--link);
   position: sticky;
   z-index: 20;
   padding: 1rem 2rem;
-  border: 0px dotted #d00000;
+  border: 0px dotted var(--border);
 }
 
   .sticky-section {
@@ -520,7 +504,7 @@ color: var(--link);
 }
 
 .sticky-subtitle {
-  color: #d00000;
+  color: var(--highlight);
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
@@ -533,12 +517,12 @@ color: var(--link);
   padding: 3.5rem 2rem;
   padding-bottom: 0vh;
 
-  border: 0px dotted #d00000;
+  border: 0px dotted var(--highlight);
 }
 
 
 .event-year {
-  color: #d00000;
+  color: var(--highlight);
   font-weight: lighter;
   font-size: 3em;
   text-align: center;
@@ -560,7 +544,7 @@ color: var(--link);
   margin-bottom: 0px;
   padding-left: 0%; /* Align with films */
   padding: 0vw;
-  border: 2px dotted #d00026;
+  border: 2px dotted var(--border);
 }
 
 .goes {
@@ -568,7 +552,7 @@ color: var(--link);
   margin-bottom: 0px;
   padding-left: 0%; /* Align with films */
   padding: 1em;
-  border: 2px dotted #d00026;
+  border: 2px dotted var(--border);
 }
 
 .programmenotes {
@@ -593,7 +577,7 @@ h4{
   margin: 10px;
 
   font-size: 1.1em;
-  color: #333;
+  color: var(--font);
   text-align: center;
 }
 
@@ -634,7 +618,7 @@ padding: 20px;
     padding: 0px;
     font-weight: bold;
     font-size: 1em;
-    color: #d00000;
+    color: var(--highlight);
     text-align: center;
   }
   
@@ -666,31 +650,31 @@ img {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 1em;
-  color: #d00000;
+  color: var(--highlight);
   text-align: left;
 }
 
 .film .filmmaker {
-  color: #333;
+  color: var(--font);
   margin: 5px 0;
   font-style: normal;
   text-align: left;
 }
 
 .film p {
-  color: #d00000;
+  color: var(--highlight);
   margin: 10px 0;
   text-align: left;
 }
 
 .film .film-info {
-  color: #333;
+  color: var(--font);
   text-align: justify;
 }
 
 .film .tech-info {
   font-style: italic;
-  color: #333;
+  color: var(--font);
   font-size: 0.75em;
   font-weight: lighter;
   text-align: left;
@@ -699,7 +683,7 @@ img {
 footer {
   margin-top: 20px;
   padding: 10px;
-  background: #f4f4f4;
+  background: var(--background);
   text-align: center;
 }
 
@@ -776,14 +760,12 @@ text-align: center;
 
 .emblem {
   height: 300;
-  border: 0px dotted #d00000;
   width:90vw;
   margin:0 auto;
   }
 
 .info {
   height: 300;
-  border: 0px dotted #d00000;
   width:100%;
   margin:0 auto;
   }
