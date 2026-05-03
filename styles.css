@@ -3,8 +3,64 @@
   --link: #D10026;
   --highlight: #D10026;
   --border: #D10026;
-  --colour2: #D10026;
+  --colour2: #8400A8;
   --font: #333;
+  --bear: #D10026;
+}
+
+
+.img-wrapper {
+    position: relative; /* Anchor for the overlay */
+    display: inline-block;
+    line-height: 0; /* Removes tiny gap at bottom of images */
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Use your randomized CSS variable here */
+    background-color: var(--highlight); 
+    
+    /* Control transparency (0.3 is 30% color, 70% image) */
+    opacity: 0.5; 
+    
+    /* OPTIONS: 
+       'multiply' makes it look like a colored lens.
+       'screen' makes it look like a light wash.
+       'hue' keeps the image details but changes the color. */
+    mix-blend-mode: color-dodge; 
+    
+    transition: opacity 0.3s ease; /* Smooth transition if you change colors */
+    pointer-events: none; /* Allows user to still right-click the image */
+}
+
+.img-wrapper h2 {
+  position: absolute;
+  top: 8px;
+ 
+  margin-left: 20px;
+  color: var(--background);
+}
+
+.img-wrapper h4 {
+  position: absolute;
+  font-weight: lighter;
+  top: 40px;
+
+  margin-left: 20px;
+  color: var(--background);
 }
 
 body {
@@ -12,18 +68,24 @@ body {
   margin: 0px;
   padding: 0% 10%;
   box-sizing: border-box;
-  color: #333;
+  color: var(--font);
   background-color: var(--background);
   padding-bottom: 5%;
 }
 
 .award {
-  background-color: var(--border);
+  background-color: var(--highlight);
 }
 
 .title{
   font-size: 200vw;
 }
+
+.overlay {
+  background-color: purple;
+  background-blend-mode: screen;
+}
+
 
 .bottle-div {
   margin: 0;
@@ -95,11 +157,13 @@ body {
 input[type=text] {
   color: var(--font);
   padding-left: 5px;
+ font-size: 16px;
 }
 
 input[type=email] {
   color: var(--font);
     padding-left: 5px;
+     font-size: 16px;
 }
 
 input::placeholder {
@@ -110,7 +174,7 @@ input::placeholder {
 
 .input-row .field input:focus {
 
-  border-color: var(--border);
+  border-color: var(--colour2);
     outline: none;
 }
 
@@ -142,19 +206,21 @@ input {
   width: 100%;
   padding: 12px;
   margin-bottom: 10px;
-  font-size: larger;
+  font-size: 22px;
   background-color: var(--colour2); 
   color: var(--background); 
   border: none;
   cursor: pointer;
-  font-weight: normal;
-  font-style: italic;
+  font-weight: bolder;
+ text-align: center;
+
+ 
     border-radius: 3px;
 }
 
 .submit-btn:not(:disabled):hover {
   background-color: var(--background); /* Changes color on hover */
-  color: var(--border);
+  color: var(--colour2);
     cursor: pointer;
 }
 
@@ -517,7 +583,7 @@ color: var(--link);
 h3 {
   margin-top: 1em;
   font-size: 1.5em;
-  color: #333;
+  color: var(--font);
   text-align: center;
 }
 
@@ -752,11 +818,15 @@ text-align: center;
 
   .field {
     width: 100%;            /* Forces each field to take up full width on mobile */
+    margin-bottom: 0px;
+    padding: 0px;
   }
 
   .box {
     margin: 0 auto;
   }
 
-}
+.submit-btn { text-align: left;
 
+}
+}
